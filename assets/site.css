@@ -151,6 +151,7 @@ html, body { margin: 0; background: var(--lh-surface, #ffffff); }
 .lh-osc-item:nth-child(odd) { padding-right: 22px; }
 .lh-osc-item:nth-child(even) { padding-left: 22px; border-left: 1px solid var(--lh-line); }
 .lh-osc-item span { display: block; margin-bottom: 5px; color: var(--lh-brand); font-size: 12px; }
+.lh-osc-item strong { word-break: keep-all; }
 .lh-brand-grid { display: grid; grid-template-columns: repeat(5, 1fr); border-top: 1px solid var(--lh-line); border-left: 1px solid var(--lh-line); }
 .lh-brand-tile {
   min-height: 92px;
@@ -193,7 +194,7 @@ html, body { margin: 0; background: var(--lh-surface, #ffffff); }
 .lh-cta p { margin: 7px 0 0; color: var(--lh-muted); font-size: 13px; }
 .lh-footer {
   display: grid;
-  grid-template-columns: 1.2fr .8fr .8fr;
+  grid-template-columns: 1.1fr .55fr 1.45fr;
   gap: 42px;
   padding: 48px 9% 28px;
   background: var(--lh-brand-dark);
@@ -224,6 +225,7 @@ html, body { margin: 0; background: var(--lh-surface, #ffffff); }
   .lh-hero-meta { left: 24px; right: auto; bottom: 24px; }
   .lh-section { padding: 52px 24px; }
   .lh-section-head, .lh-osc-head, .lh-cta { display: block; }
+  .lh-osc-head .lh-note { display: block; margin-top: 6px; }
   .lh-product-grid, .lh-card-grid, .lh-osc-grid, .lh-brand-grid, .lh-app-tiles, .lh-service-grid, .lh-process { grid-template-columns: 1fr; }
   .lh-osc-item:nth-child(odd), .lh-osc-item:nth-child(even) { padding: 13px 0; border-left: 0; }
   .lh-cta .lh-btn { margin-top: 16px; }
@@ -265,3 +267,25 @@ html, body { margin: 0; background: var(--lh-surface, #ffffff); }
 @media (max-width: 900px) {
   .lh-menu { display: block; }
 }
+
+.lh-osc-item.lh-osc-item-wide {
+  grid-column: 1 / -1;
+  padding-left: 0;
+  padding-right: 0;
+  border-left: 0;
+}
+.lh-footer p a {
+  display: inline;
+  color: #e8f2fa;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.lh-footer p a:hover { color: #fff; }
+.lh-contact-details { margin-top: 14px; }
+.lh-contact-details p { margin: 4px 0; }
+.lh-contact-details a {
+  color: var(--lh-brand);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.lh-contact-details a:hover { color: var(--lh-brand-dark); }
