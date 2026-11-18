@@ -152,16 +152,29 @@ html, body { margin: 0; background: var(--lh-surface, #ffffff); }
 .lh-osc-item:nth-child(even) { padding-left: 22px; border-left: 1px solid var(--lh-line); }
 .lh-osc-item span { display: block; margin-bottom: 5px; color: var(--lh-brand); font-size: 12px; }
 .lh-osc-item strong { word-break: keep-all; }
-.lh-brand-grid { display: grid; grid-template-columns: repeat(5, 1fr); border-top: 1px solid var(--lh-line); border-left: 1px solid var(--lh-line); }
-.lh-brand-tile {
-  min-height: 92px;
+.lh-brand-grid {
   display: grid;
-  place-items: center;
-  border-right: 1px solid var(--lh-line);
-  border-bottom: 1px solid var(--lh-line);
-  color: #243746;
-  font-size: 18px;
-  font-weight: 500;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+.lh-brand-tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 118px;
+  height: 118px;
+  padding: 18px 16px;
+  background: #fff;
+  border: 1px solid var(--lh-line);
+  border-radius: 6px;
+}
+.lh-brand-tile img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 68px;
+  object-fit: contain;
 }
 .lh-apps { display: grid; grid-template-columns: 1.05fr .95fr; min-height: 360px; background: var(--lh-brand-dark); color: #fff; }
 .lh-app-copy { padding: 70px 15%; }
@@ -226,7 +239,7 @@ html, body { margin: 0; background: var(--lh-surface, #ffffff); }
   .lh-section { padding: 52px 24px; }
   .lh-section-head, .lh-osc-head, .lh-cta { display: block; }
   .lh-osc-head .lh-note { display: block; margin-top: 6px; }
-  .lh-product-grid, .lh-card-grid, .lh-osc-grid, .lh-brand-grid, .lh-app-tiles, .lh-service-grid, .lh-process { grid-template-columns: 1fr; }
+  .lh-product-grid, .lh-card-grid, .lh-osc-grid, .lh-app-tiles, .lh-service-grid, .lh-process { grid-template-columns: 1fr; }
   .lh-osc-item:nth-child(odd), .lh-osc-item:nth-child(even) { padding: 13px 0; border-left: 0; }
   .lh-cta .lh-btn { margin-top: 16px; }
   .lh-footer { grid-template-columns: 1fr; padding: 42px 24px 24px; }
@@ -289,3 +302,12 @@ html, body { margin: 0; background: var(--lh-surface, #ffffff); }
   text-underline-offset: 2px;
 }
 .lh-contact-details a:hover { color: var(--lh-brand-dark); }
+
+@media (max-width: 900px) {
+  .lh-brand-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 640px) {
+  .lh-brand-grid { grid-template-columns: repeat(2, 1fr); }
+  .lh-brand-tile { min-height: 104px; height: 104px; padding: 14px 12px; }
+  .lh-brand-tile img { max-height: 58px; }
+}
