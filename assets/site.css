@@ -333,3 +333,60 @@ html, body { margin: 0; background: var(--lh-surface, #ffffff); }
   .lh-brand-tile { min-height: 104px; height: 104px; padding: 14px 12px; }
   .lh-brand-tile img { max-height: 58px; }
 }
+
+.lh-phone {
+  display: inline;
+}
+.lh-phone-mask { letter-spacing: .02em; }
+.lh-phone-reveal {
+  display: none;
+  margin-left: 8px;
+  padding: 1px 7px;
+  border: 1px solid currentColor;
+  border-radius: 3px;
+  background: transparent;
+  color: inherit;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.4;
+  cursor: pointer;
+  vertical-align: baseline;
+}
+html.lh-js .lh-phone-reveal { display: inline; }
+.lh-phone-reveal:hover,
+.lh-phone-reveal:focus-visible {
+  outline: none;
+}
+.lh-footer .lh-phone-reveal {
+  color: #e8f2fa;
+  border-color: rgba(232, 242, 250, .5);
+}
+.lh-footer .lh-phone-reveal:hover,
+.lh-footer .lh-phone-reveal:focus-visible {
+  color: #fff;
+  border-color: #fff;
+}
+.lh-contact-details .lh-phone-reveal {
+  color: var(--lh-brand);
+  border-color: var(--lh-brand);
+}
+.lh-contact-details .lh-phone-reveal:hover,
+.lh-contact-details .lh-phone-reveal:focus-visible {
+  color: var(--lh-brand-dark);
+  border-color: var(--lh-brand-dark);
+}
+.lh-footer p .lh-phone,
+.lh-footer p .lh-phone-mask,
+.lh-footer p .lh-phone-link,
+.lh-contact-details .lh-phone,
+.lh-contact-details .lh-phone-mask,
+.lh-contact-details .lh-phone-link {
+  display: inline;
+}
+button.lh-btn {
+  font-family: inherit;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+}
